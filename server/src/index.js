@@ -19,10 +19,7 @@ const port = process.env.PORT || 3001;
 
 app.use(
   cors({
-    origin:
-      process.env.NODE_ENV === "production"
-        ? "https://avocado-app.onrender.com"
-        : "http://localhost:3000", // Cho phép cả local và production
+    origin: true,
     credentials: true, // Cho phép gửi cookie
   })
 );
